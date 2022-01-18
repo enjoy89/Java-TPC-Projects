@@ -11,7 +11,7 @@ public class project01_C {
         if (is == null) {
             throw new NullPointerException("Cannot find resource file");
         }
-        JSONTokener tokener = new JSONTokener(is);  // 문자열 형태의 데이터가 JSON 형태로 변환
+        JSONTokener tokener = new JSONTokener(is);  // 문자열 형태의 데이터를 JSON 형태로 변환
         JSONObject object = new JSONObject(tokener);    // JSON 형태의 데이터를 JSONObject 형태로 변환
         JSONArray students = object.getJSONArray("student");
 

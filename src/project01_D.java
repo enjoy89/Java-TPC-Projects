@@ -1,3 +1,4 @@
+import config.Information;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -13,9 +14,11 @@ import java.nio.charset.StandardCharsets;
 public class project01_D {
     public static void main(String[] args) {
         BufferedReader io = new BufferedReader(new InputStreamReader(System.in));
+        Information information = new Information();
+
         String APIURL = "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query=";
-        String ClientID = "ii0235ktnc";
-        String ClientSecret = "etQdztcuSldNa1jSQo9DCGeX2BqMouzMYolgyaub";
+        String ClientID = information.getClientID();
+        String ClientSecret = information.getClientSecret();
 
         try {
             System.out.print("주소를 입력하시오: ");
